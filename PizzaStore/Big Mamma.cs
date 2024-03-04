@@ -14,13 +14,11 @@ namespace PizzaStore
         private Customer _customerName;
         private Pizza _pizzaName;
         private int _numberOfPizzasInOrder;
-        private int _orderID;
         #endregion
 
         #region Constructor
         public BigMamma()
         {
-            _orderID = OrderID;
             _order = new Order(CustomerName,PizzaName,NumberOfPizzasInOrder);;
             _customerName = new Customer("");
             _pizzaName = new Pizza("",0);
@@ -45,12 +43,8 @@ namespace PizzaStore
         {
             get { return _numberOfPizzasInOrder; }
         }
-        public int OrderID
-        { 
-            get { return _orderID; }
-            set { _orderID = value; }
-        }
         #endregion
+        #region Methods
         public void Start()
         {
             Customer customer1 = new Customer("Miki");
@@ -75,5 +69,6 @@ namespace PizzaStore
         {
             return $"";
         }
+        #endregion
     }
 }
