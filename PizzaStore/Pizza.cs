@@ -14,22 +14,27 @@ namespace PizzaStore
         #endregion
 
         #region Constructor
-        public Pizza() 
+        public Pizza(string Name, int Price) 
         {
-            _name = "";
-            _price = 0;
+            _name = Name;
+            _price = Price;
         }
         #endregion
 
         #region Properties
         public string Name 
         {
-        get { return _name; } set { _name = value; }
+            get { return _name; } 
         }
-        public int Price
+        public double Price
         {
-            get { return _price; } set { _price = value; }
-        } 
+            get { return _price; } 
+        }
         #endregion
+        public override string ToString()
+        {
+            return $"{Name} - Price:{Price}";
+        }
+        
     }
 }
